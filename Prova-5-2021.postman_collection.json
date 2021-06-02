@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "680699c9-593e-4815-8a29-e14fc96cfce0",
+		"name": "Prova-5-2021",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/clientes",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\" : \"Jorge\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/clientes",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/clientes/1",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tarefas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/clientes/2/tarefas",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"clientes",
+								"2",
+								"tarefas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tarefa",
+			"item": [
+				{
+					"name": "listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/tarefas",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"tarefas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\" : \"lavar a louça\",\r\n    \"descricao\" : \"lavar a louça de ontem q esqueci\",\r\n    \"cliente\" : {\"id_cliente\": 1}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/tarefas",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"tarefas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseurl",
+			"value": "http://localhost:8080/"
+		}
+	]
+}
